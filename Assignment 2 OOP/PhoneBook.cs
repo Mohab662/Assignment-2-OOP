@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -53,6 +54,49 @@ namespace Assignment_2_OOP
                         break;
                     }
                 }
+            }
+        }
+
+        public long this[string name] 
+        {
+            get
+            {
+                if (names is not null)
+                {
+                    for (int i = 0; i < names.Length; i++)
+                    {
+                        if (name == names[i])
+                        {
+                            return numers[i];
+                        }
+                    }
+                }
+
+                return -1;
+            }
+
+            set 
+            {
+                if (names is not null)
+                {
+                    for (int i = 0; i < names.Length; i++)
+                    {
+                        if (name == names[i])
+                        {
+                            numers[i] = value;
+                            return;
+                        }
+                    }
+                }
+            }
+        
+        }
+
+        public string this[int index]
+        {
+            get 
+            {
+                return $"position : {index}\nName : {names[index]}\nNumers : {numers[index]}";
             }
         }
         #endregion
