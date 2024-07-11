@@ -24,6 +24,14 @@
 
             #endregion
 
+            #region Class
+            Car c1= new Car(10, "BMW" , 320);
+            Console.WriteLine(c1.ToString());
+           // c1 = new Car(20,"Verna");
+           // c1 = new Car(20);
+
+            #endregion
+
 
 
             Employee employee = new Employee();
