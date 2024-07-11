@@ -42,7 +42,7 @@ namespace Assignment_2_OOP
             Child ch1 = new Child(1,5,6);
             //override
             Console.WriteLine(ch1.X);
-            Console.WriteLine(ch1.Parent());
+            Console.WriteLine(ch1.Product());
             #endregion
 
 
