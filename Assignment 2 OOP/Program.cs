@@ -1,4 +1,6 @@
-﻿namespace Assignment_2_OOP
+﻿using Assignment_2_OOP.Inhertince;
+
+namespace Assignment_2_OOP
 {
     internal class Program
     {
@@ -27,9 +29,20 @@
             #region Class
             Car c1= new Car(10, "BMW" , 320);
             Console.WriteLine(c1.ToString());
-           // c1 = new Car(20,"Verna");
-           // c1 = new Car(20);
+            // c1 = new Car(20,"Verna");
+            // c1 = new Car(20);
 
+            #endregion
+
+            #region Inhertince
+            Parent p1 = new Parent(1,2);
+            Console.WriteLine(p1.Product());
+            Console.WriteLine(p1.ToString());
+
+            Child ch1 = new Child(1,5,6);
+            //override
+            Console.WriteLine(ch1.X);
+            Console.WriteLine(ch1.Parent());
             #endregion
 
 
